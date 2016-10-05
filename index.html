@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="icons.css" />   
   <link rel="icon" type="image/png" href="favicon.png">
   
-  <script>
+  <!-- <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -28,7 +28,7 @@
   ga('create', 'UA-80609163-1', 'auto');
   ga('send', 'pageview');
 
-</script>
+</script> -->
   
   
 </head>
@@ -888,7 +888,7 @@
 			<div class="col_1 clearfix">				
 				<span> <a href="https://www.facebook.com/HoriconMarshWounedWarriors">For the latest news and updates, follow us on Facebook <span class="colecticon collecticon-facebook"></span>	</a> </span>
 			
-				<a href="http://www.reliablecounter.com" target="_blank"><img src="http://www.reliablecounter.com/count.php?page=horiconmarshww.com&digit=style/plain/1/&reloads=0" alt="www.reliablecounter.com" title="www.reliablecounter.com" border="0"></a>
+				<!-- <a href="http://www.reliablecounter.com" target="_blank"><img src="http://www.reliablecounter.com/count.php?page=horiconmarshww.com&digit=style/plain/1/&reloads=0" alt="www.reliablecounter.com" title="www.reliablecounter.com" border="0"></a> -->
 			
 			</div>  			
 		
@@ -930,46 +930,55 @@
         { 
             $('#fixed_nav').addClass('stickytop');   
             $('#filler').addClass('filler_big');
-            $('#fixed_nav').css( "opacity", "100");
+            //$('#fixed_nav').css( "opacity", "100");
             $('#pointer').css( "opacity", "100");
         }
 		else 
         { 
             $('#fixed_nav').removeClass('stickytop');  
             $('#filler').removeClass('filler_big');
-            $('#fixed_nav').css( "opacity", "0.5");
+            //$('#fixed_nav').css( "opacity", "0.5");
             $('#pointer').css( "opacity", "0.0");
         } 
 	});		
     
     
-    // JQuery to update nav bar indicator as we scroll.
-    var offset = 0;
-    var anchor_WhatWeDo = $('#WhatWeDo').offset().top + offset;   
-    var anchor_AnnualEvent = $('#AnnualEvent').offset().top + offset;
-    var anchor_WaysToHelp = $('#WaysToHelp').offset().top + offset;
+    // JQuery to update nav bar indicator as we scroll.  Basically test for anchor visibility at each section.    
+    var offset = window.outerWidth * 0.15;   // Our width/height of elements change based on screen width so factor that variance into our 'is visible' test.
+    var anchor_AboutUs = $('#AboutUs').offset().top - offset; 
+    var anchor_WhatWeDo = $('#WhatWeDo').offset().top - offset;   
+    var anchor_AnnualEvent = $('#AnnualEvent').offset().top - offset;
+    var anchor_WaysToHelp = $('#WaysToHelp').offset().top - offset;
     
     // JQuery code for the Sticky Top Menu.
 	$(window).scroll(function()
 	{
         var y = $(this).scrollTop();
         
-		if ( y < anchor_WhatWeDo) 
+        $('#fixed_nav ul li').removeClass('active');
+        
+		if ( y > anchor_AboutUs && y < anchor_WhatWeDo) 
         {
             $('#pointer').css( "left", "9%");            
+            $('#fixed_nav ul li:nth-child(1)').addClass('active');
+            //console.log('Who We Are ' + y);
         }
         else if ( y > anchor_WhatWeDo && y < anchor_AnnualEvent)
         {
-            $('#pointer').css( "left", "28%");    
+            $('#pointer').css( "left", "28%");   
+            $('#fixed_nav ul li:nth-child(2)').addClass('active');
+             //console.log('What We Do ' + y);
         }
         else if ( y > anchor_AnnualEvent && y < anchor_WaysToHelp)
         {
-            $('#pointer').css( "left", "48%");    
+            $('#pointer').css( "left", "48%");
+            $('#fixed_nav ul li:nth-child(3)').addClass('active');
         }
         
         else if ( y > anchor_WaysToHelp )
         {
-             $('#pointer').css( "left", "68%");     
+             $('#pointer').css( "left", "68%"); 
+            $('#fixed_nav ul li:nth-child(4)').addClass('active');
         }        
        
 	});		    
