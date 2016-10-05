@@ -245,7 +245,7 @@ section.module.parallax-6 {
 /* ============================================================
  MEDIA QUERIES
 ============================================================ */
-@media all and (max-width: 1050) {
+@media all and (max-width: 1200) {
 	 .section_heading { font-size: 2em; padding: 40px 0px; width: 100%; text-align: center; }
 	 .heading_container { padding: 40px; }	 
 	 
