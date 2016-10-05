@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab">
   <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+ <link href="https://fonts.googleapis.com/css?family=Black+Ops+One|Open+Sans" rel="stylesheet">
   
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="icons.css" />   
@@ -42,7 +43,7 @@
 			.stats { vertical-align: top; width: 140px;  text-align: center; color: gray; display: inline-block; margin: 0px 15px;  }
 			.stats p {  }
 			.stats hr { width: 50px; border: 1px solid #ddd; margin-top: -10px; }
-			.stats h1 {font-family: "Abel"; font-size: 4em; text-align: center; color: red; font-weight: 700; }
+			.stats h1 {font-family: 'Black Ops One'; font-size: 4em; text-align: center; color: red;  }
 					
 			.motto { width: 75%; font-weight: 700; text-transform: uppercase; text-align: center; font-size: 175%; line-height: 3em;
 				color: white; padding: 10px; text-shadow: 0 0 1px #000;  border-radius: 3px; border: 3px solid white;		
@@ -75,17 +76,37 @@
 		<section class="module parallax parallax-1" style="position: relative;">
 			<div class="brand_container">
 				<div class="brand_image"><img src="images/circle_brand12.png"/></div>			
-				<span style="line-height: 1.3em; white-space: normal;">HORICON MARSH WOUNDED WARRIORS INC.</span>
+				<span style="line-height: 1.3em; white-space: normal;">HORICON MARSH VETERANS HUNT</span>
+			</div>	
+            
+            <div class="info_container">
+                <ul>                    
+                    <li>Next Event:  October 21-23</li>
+                    <li class="big">Horicon, WI</li>
+                </ul>
 			</div>		
 		</section> 	 
 		<!--------------------------------- END LANDING SECTION --------------------------------------------->
 
+		<!-- Fixed NAV Sectcion -->
+        <!-- Create a floating/fixed navigation section which appears when users get below first section -->
+        <!-- Nav Menu should indicate which section they screen is currently on -->
+        <div id="fixed_nav">
+            <ul>
+                <li><a href="#AboutUs">Who We Are</a></li>
+                <li><a href="#WhatWeDo">What We Do</a></li>
+                <li><a href="#AnnualEvent">When & Where</a></li>
+                <li><a href="#WaysToHelp">Ways to Help</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul> 
+            <div id="pointer"> <span class="colecticon collecticon-triangle-down"></span> </div>
+        </div>
+        <div id="filler"></div>
 		
+		<!--------------------------------- SECTION 2:  ABOUT US --------------------------------------------->
 		<!-- Anchor for section -->
 		<span id="AboutUs" class="anchor"></span> 
 		
-		
-		<!--------------------------------- SECTION 2:  ABOUT US --------------------------------------------->
 		<section class="module content" style="border-top: 1px solid #cfcfcf; overflow: hidden; ">        
 			<div class="container">
 				<h2>Who We Are</h2>
@@ -147,7 +168,7 @@
 		<!--------------------------------- SECTION 3: VIDEO --------------------------------------------->		
 		<style>			
 			#video_section { padding-top: 20px;  }
-			#video_section p { color: white; text-shadow: 1px 1px 2px black; background: rgba(0,0,0,0.1); border-radius: 10px; padding: 10px; margin-bottom: 10px;}
+			#video_section p { color: white; text-shadow: 1px 1px 2px black; background: rgba(0,0,0,0.4); border-radius: 10px; padding: 10px; margin-bottom: 10px;}
 			#video_section h2 { color: white; text-shadow: 1px 1px 2px black; margin-top: 20px; } 
 			#video_section a { color: white; font-weight: 700; }
 			
@@ -191,6 +212,8 @@
 		
 		
 		<!--------------------------------- SECTION 4: WHAT WE DO --------------------------------------------->
+		<!-- Anchor for section -->
+		<span id="WhatWeDo" class="anchor"></span> 
 		<section class="module content">			
 			<div class="container">
 				<h2>What We Do</h2> 
@@ -689,6 +712,8 @@
 										
 		}	
 	  </style>
+	<!-- Anchor for section -->
+	<span id="WaysToHelp" class="anchor"></span> 
 	  	  
 	<section class="module parallax parallax-6" style="background-color: tan;">        
 		<div class="heading_container"> 
@@ -804,6 +829,9 @@
 					
 	  </style>	  
 
+ <!-- Anchor for section -->
+	       <span id="Contact" class="anchor"></span> 
+
 	 <footer class="drop-shadow">	
 	 
 			<!-- Brand & Copyright -->
@@ -822,7 +850,9 @@
 				<div class="col_4">	<a href="waystohelp.html"> <span class="colecticon collecticon-location"></span> Ways to Help the Cause</a> </div>			  
 			</div> 
 			
-			<hr>			
+			<hr>
+         
+          
 	 
 			<!-- Contact Details -->
 			<div id="footer_contact" class="col_1 clearfix">
@@ -893,6 +923,56 @@
 			.add(AnimateTestimonialsTwo());
 	});
 	
+	// JQuery code for the Sticky Top Menu.
+	$(window).scroll(function()
+	{
+		if ($(this).scrollTop() >= 900) 
+        { 
+            $('#fixed_nav').addClass('stickytop');   
+            $('#filler').addClass('filler_big');
+            $('#fixed_nav').css( "opacity", "100");
+            $('#pointer').css( "opacity", "100");
+        }
+		else 
+        { 
+            $('#fixed_nav').removeClass('stickytop');  
+            $('#filler').removeClass('filler_big');
+            $('#fixed_nav').css( "opacity", "0.5");
+            $('#pointer').css( "opacity", "0.0");
+        } 
+	});		
+    
+    
+    // JQuery to update nav bar indicator as we scroll.
+    var offset = 0;
+    var anchor_WhatWeDo = $('#WhatWeDo').offset().top + offset;   
+    var anchor_AnnualEvent = $('#AnnualEvent').offset().top + offset;
+    var anchor_WaysToHelp = $('#WaysToHelp').offset().top + offset;
+    
+    // JQuery code for the Sticky Top Menu.
+	$(window).scroll(function()
+	{
+        var y = $(this).scrollTop();
+        
+		if ( y < anchor_WhatWeDo) 
+        {
+            $('#pointer').css( "left", "9%");            
+        }
+        else if ( y > anchor_WhatWeDo && y < anchor_AnnualEvent)
+        {
+            $('#pointer').css( "left", "28%");    
+        }
+        else if ( y > anchor_AnnualEvent && y < anchor_WaysToHelp)
+        {
+            $('#pointer').css( "left", "48%");    
+        }
+        
+        else if ( y > anchor_WaysToHelp )
+        {
+             $('#pointer').css( "left", "68%");     
+        }        
+       
+	});		    
 </script>
 
 

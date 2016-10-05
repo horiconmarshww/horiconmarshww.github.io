@@ -131,6 +131,7 @@ main {
   font-weight: normal;
   border-bottom: 3px solid red;   
   display: inline-block; 
+   color: #333;
 }
 
  p {
@@ -286,15 +287,15 @@ section.module.parallax-6 {
   BRAND
 ============================================================ */
 
-.brand_container { position: absolute; top: 20px; width: 900px; margin: 0 auto; padding: 0px; left: 50%; margin-left: -450px;
-				   background: rgba(255, 255, 255, 0.5); box-shadow: 0 0 4px 1px #333;} 	
+.brand_container { position: absolute; top: 20px; width: 725px; margin: 0 auto; padding: 0px; left: 50%; margin-left: -350px;
+				   background: rgba(255, 255, 255, 0.5); box-shadow: 0 0 4px 1px #333; } 
 .brand_container span { position: relative; display: block; margin-left: 83px; padding-left: 10px; font-size: 3em;	
 		background: url("../images/background_paper.jpg") no-repeat; border: 1px solid #ccc; text-shadow: 0 0 1px black;}
 .brand_image { position: relative; width: 85px; height: 65px; float: left; z-index: 9999;}
 .brand_image img { width: 100%; height: 100%; display: block; }	
 		
 @media all and (max-width: 950px) {
-	.brand_container { width: 535px; text-align: center; margin-left: -267px;}		
+	.brand_container { width: 435px; text-align: center; margin-left: -200px;}		
 	.brand_container span { font-size: 2.35em; margin-left: 130px;}
 	.brand_image { width: 130px; height: 98px; }
 
@@ -303,8 +304,8 @@ section.module.parallax-6 {
 			
 @media all and (max-width: 550px) {
 	.brand_container { width: 335px; text-align: center; margin-left: -167px;}		
-	.brand_container span { font-size: 1.75em; margin-left: 130px;}
-	.brand_image { width: 130px; height: 110px; }
+	.brand_container span { font-size: 1.9em; margin-left: 130px;}
+	.brand_image { width: 130px; height: 119px; }
 
 	.stats { width: 100%; margin: 0px; }
 	.stats hr { width: 100%; }	
@@ -325,3 +326,55 @@ section.module.parallax-6 {
 	.stats hr { width: 100%; }			
 }				
 
+
+.info_container {
+    position: absolute; 
+    
+    width: 100%;;
+    top: 59%;
+    font-size: 200%;
+    background-color: rgba(0,96,128, 0.7);
+    text-align:center;
+    color: white;
+    padding: 100px 40px; 
+    font-family: 'Black Ops One', cursive;
+    border-top: 1px solid teal;
+}
+
+.info_container ul { list-style-type: none; }
+.info_container .big { font-size: 250%; }
+
+
+#fixed_nav {
+    border: none;
+    background-color: #222;
+    box-shadow: 1px 3px 4px #aaa;
+    height: 60px; 
+    width: 100%;
+    z-index: 99999; 
+    white-space: nowrap;   
+    transition: 1.0s all;
+    opacity: 0.5;    
+}
+
+#fixed_nav a { text-decoration: none; color: white; }
+
+#fixed_nav ul { list-sytle-type: none;  overflow-y: hidden;  font-family: "Ubuntu"; }
+#fixed_nav li { color: white; font-size: 150%; padding: 12px 0px;  float: left; width: 20%; display: inline; text-align: center; border-right: 2px solid #aaa; border-top: 1px solid #fff;}
+#fixed_nav li:last-child { border-right: none; border-left: 1px solid #aaa; background-color: firebrick; text-shadow: 1px 2px 1px black;}
+
+.stickytop { position: fixed; top: 0px; }  
+.filler_big { margin-bottom: 60px; }
+
+#pointer {
+    font-size: 2.5em;    
+    position:relative;
+    top: -25px;   
+    left: 9%;
+    border: none;
+    z-index: 99999;
+    width: 40px;
+    text-shadow: 0 3px #aaa;      
+}
+
+#pointer span { color: #222; }
