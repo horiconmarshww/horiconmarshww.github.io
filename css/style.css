@@ -242,48 +242,6 @@ section.module.parallax-6 {
 }
 
 
-/* ============================================================
- MEDIA QUERIES
-============================================================ */
-@media all and (max-width: 1050px) {
-	 .section_heading { font-size: 2em; padding: 40px 0px; width: 100%; text-align: center; }
-	 .heading_container { padding: 40px; }	 
-	 
-	 section.module.parallax {
-	  height: 800px;
-	  background-position: 50% 50%;
-	  background-repeat: no-repeat;
-	  background-attachment: scroll;
-	  -webkit-background-size: cover;
-	  -moz-background-size: cover;
-	  -o-background-size: cover;
-	  background-size: cover;
-	}
-    
-    section.module.parallax-1  { background-attachment: scroll; }
-
-	 h2 {
-	  margin-bottom: 25px;
-	  font-family: "Abel", "Roboto Slab", serif;
-	  font-size: 200%;
-	  font-weight: normal;
-	  border-bottom: 3px solid red;   
-	  display: inline-block; 
-	}	
-}
-
-@media all and (max-width: 550px) {	
-	 .section_heading { font-size: 2em; padding: 10px 0px; width: 100%; text-align: center; }
-	 .heading_container { padding: 10px; }	 
-	 
-	 h2 {  text-align:  center; font-size: 165%;  }
-	 p { font-size: 140%; } 	 
-}
-
-@media all and (max-width: 350px) {	
-						
-}			
-
 
 /* ============================================================
   BRAND
@@ -355,8 +313,7 @@ section.module.parallax-6 {
     width: 100%;
     z-index: 99999; 
     white-space: nowrap;   
-    transition: 1.0s all;
-    #opacity: 0.5;    
+    transition: 1.0s all;        
 }
 
 #fixed_nav a { text-decoration: none; color: white; }
@@ -385,3 +342,51 @@ section.module.parallax-6 {
 }
 
 #pointer span { color: #222; }
+
+
+/* ============================================================
+ MEDIA QUERIES
+============================================================ */
+@media all and (max-width: 1050px) {
+	 .section_heading { font-size: 2em; padding: 40px 0px; width: 100%; text-align: center; }
+	 .heading_container { padding: 40px; }	 
+	 
+	 section.module.parallax {
+	  height: 800px;
+	  background-position: 50% 50%;
+	  background-repeat: no-repeat;
+	  background-attachment: scroll;
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	}
+    
+    .info_container { top: 54%; }
+    #fixed_nav { font-size: 0.9em; height: 55px; }
+    
+    section.module.parallax-4  { height: 1050px; }
+
+	 h2 {
+	  margin-bottom: 25px;
+	  font-family: "Abel", "Roboto Slab", serif;
+	  font-size: 200%;
+	  font-weight: normal;
+	  border-bottom: 3px solid red;   
+	  display: inline-block; 
+	}	
+}
+
+@media all and (max-width: 550px) {	
+	 .section_heading { font-size: 2em; padding: 10px 0px; width: 100%; text-align: center; }
+	 .heading_container { padding: 10px; }	
+    
+     .info_container { top: 35%; }
+	 
+	 h2 {  text-align:  center; font-size: 165%;  }
+	 p { font-size: 140%; } 	 
+}
+
+@media all and (max-width: 350px) {	
+						
+}		
