@@ -194,7 +194,7 @@ section.module.parallax {
 }
 
 section.module.parallax-1 {
-  #background: linear-gradient( rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.0) 20% ), url("../images/group.jpg");  
+  #background: linear-gradient( rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.0) 20% ), url("../images/group1.jpg");  
   background:  url("../images/group.jpg");  
  background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -245,7 +245,7 @@ section.module.parallax-6 {
 /* ============================================================
  MEDIA QUERIES
 ============================================================ */
-@media all and (max-width: 1200) {
+@media all and (max-width: 1050px) {
 	 .section_heading { font-size: 2em; padding: 40px 0px; width: 100%; text-align: center; }
 	 .heading_container { padding: 40px; }	 
 	 
@@ -259,6 +259,8 @@ section.module.parallax-6 {
 	  -o-background-size: cover;
 	  background-size: cover;
 	}
+    
+    section.module.parallax-1  { background-attachment: scroll; }
 
 	 h2 {
 	  margin-bottom: 25px;
