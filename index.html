@@ -91,7 +91,7 @@
 		<!-- Fixed NAV Sectcion -->
         <!-- Create a floating/fixed navigation section which appears when users get below first section -->
         <!-- Nav Menu should indicate which section they screen is currently on -->
-        <div id="fixed_nav">
+        <div id="fixed_nav" class="default_top">
             <ul>
                 <li><a href="#AboutUs">Who We Are</a></li>
                 <li><a href="#WhatWeDo">What We Do</a></li>
@@ -101,7 +101,7 @@
             </ul> 
             <div id="pointer"> <span class="colecticon collecticon-triangle-down"></span> </div>
         </div>
-        <div id="filler"></div>
+        <!-- <div id="filler"></div> -->
 		
 		<!--------------------------------- SECTION 2:  ABOUT US --------------------------------------------->
 		<!-- Anchor for section -->
@@ -926,18 +926,20 @@
 	// JQuery code for the Sticky Top Menu.
 	$(window).scroll(function()
 	{
-		if ($(this).scrollTop() >= 900) 
+		if ($(this).scrollTop() >= 850) 
         { 
-            $('#fixed_nav').addClass('stickytop');   
-            $('#filler').addClass('filler_big');
-            //$('#fixed_nav').css( "opacity", "100");
+            $('#fixed_nav').removeClass('default_top'); 
+            $('#fixed_nav').addClass('sticky_top'); 
+            
+            $('#filler').addClass('filler_big');           
             $('#pointer').css( "opacity", "100");
         }
 		else 
         { 
-            $('#fixed_nav').removeClass('stickytop');  
-            $('#filler').removeClass('filler_big');
-            //$('#fixed_nav').css( "opacity", "0.5");
+            $('#fixed_nav').addClass('default_top'); 
+            $('#fixed_nav').removeClass('sticky_top'); 
+             
+            $('#filler').removeClass('filler_big');            
             $('#pointer').css( "opacity", "0.0");
         } 
 	});		
