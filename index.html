@@ -952,38 +952,80 @@
     var anchor_AnnualEvent = $('#AnnualEvent').offset().top - offset;
     var anchor_WaysToHelp = $('#WaysToHelp').offset().top - offset;
     
-    // JQuery code for the Sticky Top Menu.
+        
+    // State variables to track when changes need to be made.  Repaints/Reflows are expensive, so only update CSS when user has scrolled outside of current navigation section.
+    var current_nav = 0;
+    
+    // Check position each time user scrolls to determine if the user has scrolled onto the next navigation section.  If so, update the corresponding nav menu option.
 	$(window).scroll(function()
 	{
-        var y = $(this).scrollTop();
-        
-        $('#fixed_nav ul li').removeClass('active');
+        var y = $(this).scrollTop();        
+       
         
 		if ( y > anchor_AboutUs && y < anchor_WhatWeDo) 
         {
-            $('#pointer').css( "left", "9%");            
-            $('#fixed_nav ul li:nth-child(1)').addClass('active');
-            //console.log('Who We Are ' + y);
+            if (current_nav != 1) 
+            {
+                $('#fixed_nav ul li').removeClass('active');
+                
+                $('#pointer').css( "left", "9%");            
+                $('#fixed_nav ul li:nth-child(1)').addClass('active');
+                
+                current_nav = 1;
+            }
         }
         else if ( y > anchor_WhatWeDo && y < anchor_AnnualEvent)
         {
-            $('#pointer').css( "left", "28%");   
-            $('#fixed_nav ul li:nth-child(2)').addClass('active');
-             //console.log('What We Do ' + y);
+            if (current_nav != 2)
+            {
+                $('#fixed_nav ul li').removeClass('active');
+                
+                $('#pointer').css( "left", "28%");   
+                $('#fixed_nav ul li:nth-child(2)').addClass('active');
+            
+                current_nav = 2;
+            }
         }
         else if ( y > anchor_AnnualEvent && y < anchor_WaysToHelp)
         {
-            $('#pointer').css( "left", "48%");
-            $('#fixed_nav ul li:nth-child(3)').addClass('active');
-        }
-        
+            if (current_nav != 3)
+            {
+                $('#fixed_nav ul li').removeClass('active');
+                
+                $('#pointer').css( "left", "48%");
+                $('#fixed_nav ul li:nth-child(3)').addClass('active');
+                
+                current_nav = 3;
+            }
+        }        
         else if ( y > anchor_WaysToHelp )
         {
-             $('#pointer').css( "left", "68%"); 
-            $('#fixed_nav ul li:nth-child(4)').addClass('active');
+            if (current_nav != 2)
+            {
+                $('#fixed_nav ul li').removeClass('active');
+                
+                $('#pointer').css( "left", "68%"); 
+                $('#fixed_nav ul li:nth-child(4)').addClass('active');
+                
+                current_nav = 4;
+            }
+        } 
+        else
+        {
+            if (current_nav != 0)
+            {
+                $('#fixed_nav ul li').removeClass('active');
+            }
+            
+            current_nav = 0;
         }        
        
-	});		    
+	});		
+    
+    
+    // Add a smooth scroll on hyperlink click like this
+    // https://paulund.co.uk/playground/demo/jquery_scroll_to_top/
+    
 </script>
 
 
