@@ -325,7 +325,7 @@ section.module.parallax-6 {
 #fixed_nav li.active { background-color: #222; border: 2px solid #aaa; }
 
 
-.default_top { position: absolute; top: 86%; }
+.default_top { position: absolute; top: 90%; }
 .sticky_top { position: fixed; top: 0px; }  
 .filler_big { margin-bottom: 60px; }
 
@@ -364,7 +364,7 @@ section.module.parallax-6 {
     
     .info_container { top: 56.5%; font-size: 175%; }  
     #fixed_nav li { font-size: 125%; }
-    .default_top { position: absolute; top: 76%; }
+    .default_top { position: absolute; top: 80%; }
     
     section.module.parallax-3  { height: 1100px; }
     section.module.parallax-4  { height: 1000px; }
