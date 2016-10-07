@@ -322,10 +322,10 @@ section.module.parallax-6 {
 #fixed_nav li:last-child {  background-color: rgba(255, 0, 0, 0.4); text-shadow: 1px 2px 1px black;}
 
 #fixed_nav li:hover { background-color: forestgreen; }
-#fixed_nav li.active { background-color: #222; border: 2px solid #aaa; }
+#fixed_nav li.active { background-color: #222; border: 2px solid #aaa; border-top: none; }
 
 
-.default_top { position: absolute; top: 90%; }
+.default_top { position: relative; top: 94%; }
 .sticky_top { position: fixed; top: 0px; }  
 .filler_big { margin-bottom: 60px; }
 
@@ -364,7 +364,7 @@ section.module.parallax-6 {
     
     .info_container { top: 56.5%; font-size: 175%; }  
     #fixed_nav li { font-size: 125%; }
-    .default_top { position: absolute; top: 80%; }
+    .default_top { position: absolute; top: 93%; }
     
     section.module.parallax-3  { height: 1100px; }
     section.module.parallax-4  { height: 1000px; }
