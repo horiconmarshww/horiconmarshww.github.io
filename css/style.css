@@ -131,7 +131,7 @@ main {
   font-weight: normal;
   border-bottom: 3px solid red;   
   display: inline-block; 
-   color: #333;
+  color: #333;
 }
 
  p {
@@ -161,24 +161,6 @@ section.module.parallax {
   background-size: cover;
 }
 
-.section_heading_old{
-  display: inline-block;  
-  padding: 0px 20px;
-  font-size: 3em;  
-  line-height: 1.3em;
-  font-family: "Abel", "Roboto Slab", serif;
-  background: linear-gradient( rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.0) );  
-  position: relative; 
-  top: 80px;   
-  left: 0px;
-  color: white;  
-  text-align: center;
-  text-transform: uppercase;  
-  border-left: 3px solid red;
-  border-right: 3px solid red;
-  border-radius: 10px;
-}
-
 .section_heading {	
 	font-size: 3em;  
     line-height: 1.3em;
@@ -193,10 +175,9 @@ section.module.parallax {
 	background: rgba(0,0,0,0.3); 	
 }
 
-section.module.parallax-1 {
-  #background: linear-gradient( rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.0) 20% ), url("../images/group1.jpg");  
+section.module.parallax-1 {   
   background:  url("../images/group.jpg");  
- background-position: 50% 50%;
+  background-position: 50% 50%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   -webkit-background-size: cover;
@@ -228,19 +209,6 @@ section.module.parallax-6 {
   background-image: url("../images/2015_7.jpg");
   height: 960px;
 }
-
-#waysToHelpHeaderl {    
-	background:  url("../images/way_to_help.jpg");  
-	background-position: 50% 50%;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;				
-	height: 600px;
-}
-
 
 
 /* ============================================================

@@ -73,7 +73,7 @@
 			}		
 		</style>
 		    
-		<section class="module parallax parallax-1" style="position: relative;">
+		<section id="top_section" class="module parallax parallax-1" style="position: relative;">
 			<div class="brand_container">
 				<div class="brand_image"><img src="images/circle_brand12.png"/></div>			
 				<span style="line-height: 1.3em; white-space: normal;">HORICON MARSH VETERANS HUNT</span>
@@ -928,10 +928,14 @@
 			.add(AnimateTestimonialsTwo());
 	});
 	
+    // Retrieve and store the height of the first section so we know when to pop out the nav menu.
+    var top_section_height = $('#top_section').height();    
+    
 	// JQuery code for the Sticky Top Menu.
 	$(window).scroll(function()
 	{
-		if ($(this).scrollTop() >= 850) 
+        // Pop out the nav menu once we scroll past the top of the page.
+		if ($(this).scrollTop() >= (top_section_height - 50))  
         { 
             $('#fixed_nav').removeClass('default_top'); 
             $('#fixed_nav').addClass('sticky_top'); 
