@@ -333,8 +333,8 @@ section.module.parallax-6 {
 	}
     
     .info_container { top: 56.5%; font-size: 175%; }  
-    #fixed_nav li { font-size: 125%; }
-    .default_top { position: absolute; top: 746px; }
+    #fixed_nav li { font-size: 100%; }
+    .default_top { position: absolute; top: 752px; }
     
     section.module.parallax-3  { height: 1100px; }
     section.module.parallax-4  { height: 1100px; }
@@ -368,5 +368,5 @@ section.module.parallax-6 {
 }
 
 @media all and (max-width: 400px) {	
-	#fixed_nav li { font-size: 90%; overflow: hidden; height: 90px;  padding: 0px; word-wrap: break-word; }	    
+	#fixed_nav li { font-size: 90%; overflow: hidden; height: 90px;  padding: 4px 4px; word-wrap: break-word;  }	    
 }		
