@@ -357,14 +357,16 @@ section.module.parallax-6 {
       section.module.parallax-4  { height: 860px; }
     
      .info_container { top: 35%; font-size: 150%; padding: 50px; }
-     #fixed_nav li { font-size: 90%; overflow-x: hidden; }
-    .default_top { position: absolute; top: 752px; }
+     #fixed_nav { white-space: normal; line-height: 2em; }
+     #fixed_nav li { font-size: 100%; overflow: hidden; height: 90px;  padding: 10px 10px; word-wrap: break-word; }
+    .default_top { position: absolute; top: 712px; }
     
 	 
 	 h2 {  text-align:  center; font-size: 165%;  }
-	 p { font-size: 140%; } 	 
+	 p { font-size: 140%; } 	
+     #pointer { display: none; }
 }
 
-@media all and (max-width: 350px) {	
-						
+@media all and (max-width: 400px) {	
+	#fixed_nav li { font-size: 90%; overflow: hidden; height: 90px;  padding: 0px; word-wrap: break-word; }	    
 }		
