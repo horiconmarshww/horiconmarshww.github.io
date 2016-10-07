@@ -7,7 +7,7 @@
   <meta content="width=device-width,initial-scale=1.0" name="viewport">
   <meta content="description" name="Serving Veteran's Because Freedom isn't free">
 
-  <title>Horicon Marsh Wounded Warriors Inc.</title>
+  <title>Horicon Marsh Veterans Hunt</title>
 
   <!-- css -->
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab">
@@ -179,11 +179,12 @@
 			
 			@media all and (max-width: 950px) {
 				.video_container { width: 100%; height: 460px; } 	
-				#aboutFilm { display: none; }				
+							
 			}
 					
 			@media all and (max-width: 550px) {
-				.video_container { width: 100%; height: 360px; } 				
+				.video_container { width: 100%; height: 360px; } 
+                #aboutFilm { display: none; }	
 			}
 					
 			@media all and (max-width: 350px) {	
@@ -271,7 +272,9 @@
 		<style>
 			.testimonial { display: block; width: 70%; font-size: 175%; height: 175px; margin: 0px auto; border-radius: 0; 
 							text-align: center; color: white; font-family: "Abel"; text-shadow: 1px 1px 20px black;}
-									
+			
+            #testimonial_4 { position: absolute; top: 50px; width: 100%; padding: 20px 40px; visibility: hidden; }
+            
 			.testimonials_container { 
 				overflow-x: hidden;
 				color: white;			
@@ -318,8 +321,8 @@
 			}
 
 			@media all and (max-width: 550px) {	
-				.testimonial { font-size: 125%; }
-				.testimonial:nth-child(4) { display: none; }
+				.testimonial { font-size: 125%; }				
+                #testimonial_4 { top: 10px; padding: 0px 20px;  }
 				
 				.testimonials_container { text-align: center; }
 				.testimonials_container h2 { margin: 0px; margin-bottom: 20px; }		
@@ -365,7 +368,7 @@
 					</span>
 					<span class="reviewer">- Matt Owens </span>				
 				</div>	
-				<div id="testimonial_4" class="testimonial" style="position: absolute; top: 50px; width: 100%; padding: 20px 40px; visibility: hidden;">
+				<div id="testimonial_4" class="testimonial">
 					<span class="review">
 						<span class="quotes bump_up colecticon collecticon-quote-left"></span> 
 						<span class="light_accent">Every hunt is memorable, </span>  but flying out to WI to meet with friends and other combat vets was something unimaginable.
@@ -838,7 +841,7 @@
 	 
 			<!-- Brand & Copyright -->
 			<div class="col_1 clearfix">
-				<div class="orgName"> Horicon Marsh Wounded Warriors, Inc </div>
+				<div class="orgName"> Horicon Marsh Veterans Hunt </div>
 				<span class="orgMotto"> Serving Veterans because Freedom isn't Free </span>
 			</div> 			
 			
@@ -899,7 +902,7 @@
 </div><!-- /#wrapper -->
 
 <div class="disclaimer">
-	[ We are not affiliated with the National Wounded Warriors Organization ]
+	[ Formerly known as the Horicon Marsh Wounded Warriors Inc. ]
 </div>
 
 <!-- ------------------------------------------------------------------------------------------------ -->

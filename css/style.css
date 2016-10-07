@@ -216,7 +216,7 @@ section.module.parallax-3 {
 }
 section.module.parallax-4 {
   background-image: url("../images/group_boats.jpg");
-  height: 960px;
+  height: 980px;
 }
 
 section.module.parallax-5 {
@@ -369,7 +369,7 @@ section.module.parallax-6 {
     .default_top { position: absolute; top: 746px; }
     
     section.module.parallax-3  { height: 1100px; }
-    section.module.parallax-4  { height: 1000px; }
+    section.module.parallax-4  { height: 1100px; }
   
 
 	 h2 {
@@ -385,6 +385,8 @@ section.module.parallax-6 {
 @media all and (max-width: 550px) {	
 	 .section_heading { font-size: 2em; padding: 10px 0px; width: 100%; text-align: center; }
 	 .heading_container { padding: 10px; }	
+    
+      section.module.parallax-4  { height: 860px; }
     
      .info_container { top: 35%; font-size: 150%; padding: 50px; }
      #fixed_nav li { font-size: 90%; overflow-x: hidden; }
