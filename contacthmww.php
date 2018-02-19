@@ -28,20 +28,20 @@ $errors = array();
 
 // Remove $_COOKIE elements from $_REQUEST.
 
-if(count($_COOKIE)){foreach(array_keys($_COOKIE) as $value){unset($_REQUEST[$value]);}}
+delete_if(count($_COOKIE)){foreach(array_keys($_COOKIE) as $value){unset($_REQUEST[$value]);}}
 
 // Check all fields for an email header.
 
-function recursive_array_check_header($element_value)
+delete_function recursive_array_check_header($element_value)
 {
 
 global $set;
 
-if(!is_array($element_value)){if(preg_match("/(%0A|%0D|\n+|\r+)(content-type:|to:|cc:|bcc:)/i",$element_value)){$set = 1;}}
+delete_if(!is_array($element_value)){if(preg_match("/(%0A|%0D|\n+|\r+)(content-type:|to:|cc:|bcc:)/i",$element_value)){$set = 1;}}
 else
 {
 
-foreach($element_value as $value){if($set){break;} recursive_array_check_header($value);}
+delete_foreach($element_value as $value){if($set){break;} recursive_array_check_header($value);}
 
 }
 
@@ -55,7 +55,7 @@ unset($set);
 
 // Validate email field.
 
-if(isset($_REQUEST['email']) && !empty($_REQUEST['email']))
+delete_if(isset($_REQUEST['email']) && !empty($_REQUEST['email']))
 {
 
 if(preg_match("/(%0A|%0D|\n+|\r+|:)/i",$_REQUEST['email'])){$errors[] = "Email address may not contain a new line or a colon";}
@@ -113,7 +113,7 @@ $subject = "HMWW - Volunteer Sign Up";
 
 $headers = "From: " . $_REQUEST['email'];
 
-mail($my_email,$subject,$message,$headers);
+delete_mail($my_email,$subject,$message,$headers);
 
 ?>
 
